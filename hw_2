@@ -1,3 +1,18 @@
+/*
+The Valentine's Bookmark
+
+It will remind your beloved to buy your preferred Valentine's Day gift. 
+
+1. Valentine's Day Color Theme -- change div background color while mouse moveover
+2. Rose and Heart images --  change image source while mouse moveover
+3. Redirect hyperlink to preferred gift page. change address source
+
+
+
+*/
+
+
+
 function injectJquery(callback) {
         if (window.jQuery) {
           return callback(window.jQuery);
