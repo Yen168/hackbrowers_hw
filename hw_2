@@ -1,0 +1,58 @@
+function injectJquery(callback) {
+        if (window.jQuery) {
+          return callback(window.jQuery);
+        }
+        let script = document.createElement('script');
+        script.setAttribute(
+          'src',
+          '//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'
+        );
+        script.onload = () => callback(window.jQuery);
+        script.onerror = e => alert('The script failed to load: ' + e);
+        document.head.appendChild(script);
+      }
+
+      injectJquery(function($) {
+        
+        $("a").each(function(){
+        
+          $(this).attr("href", "https://www.simplychocolate.com/max-brenner-fondue-tower-set-with-chocolates-163593?searchTerm=Max%20Brenner%20Fondue%20Tower&sBrandIdTab=SCH_&storeIdTab=24052");
+        
+        });
+        
+        $("div").each(function(){
+        
+          $(this).hover(function(){
+            
+            let bk_c = ["#FFC0CB","#F00"];
+          
+          	$(this).css("background", bk_c[Math.floor(Math.random() * 2)]);
+            //#FFC0CB   
+          
+          });
+        
+        });
+        
+        $("img").each(function(){
+        
+          $(this).hover(function(){
+            
+            let bk_img = ["http://pngimg.com/uploads/heart/heart_PNG51335.png",
+                         "http://pngimg.com/uploads/rose/rose_PNG67003.png",
+                          "http://pngimg.com/uploads/rose/rose_PNG66954.png",
+                          "http://pngimg.com/uploads/rose/rose_PNG66945.png",
+                          "http://pngimg.com/uploads/rose/rose_PNG66891.png"            
+                         ];
+          
+          	$(this).attr("src", bk_img[Math.floor(Math.random() * 6)] );
+            //#FFC0CB   
+          
+          });
+        
+        });
+        
+        $( window ).onbeforeunload(function() {
+  				return "Remember to buy me Valentine's Day gift.";
+		});
+       
+      });
